@@ -23,9 +23,9 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: <% ENV["RNS_DATABASE_NAME"] %>
-  username: <% ENV["RNS_DATABASE_USERNAME"] %>
-  password: <% ENV["RNS_DATABASE_PASSWORD"] %>
-  host: <% ENV["RNS_DATABASE_HOST"] %>
+  database: <%= ENV["RNS_DATABASE_NAME"] %>
+  username: <%= ENV["RNS_DATABASE_USERNAME"] %>
+  password: <%= ENV["RNS_DATABASE_PASSWORD"] %>
+  host: <%= ENV["RNS_DATABASE_HOST"] %>
   port: 5432
 
