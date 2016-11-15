@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: unicode
+  database: <% ENV["RNS_DATABASE_NAME"] %>
+  username: <% ENV["RNS_DATABASE_USERNAME"] %>
+  password: <% ENV["RNS_DATABASE_PASSWORD"] %>
+  host: <% ENV["RNS_DATABASE_HOST"] %>
+  port: 5432
+
